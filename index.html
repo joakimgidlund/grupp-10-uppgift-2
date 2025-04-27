@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue@3.5.13"
+        integrity="sha384-G++pO/TtP6SeNEBuO/CYuppmlcEhA0Rj9IcY5feVJXhyYraEA8CKVZV38iDXLTyJ"
+        crossorigin="anonymous"></script>
+    <div id="app">
+        <div class="top">
+            <img src="assets/search.svg" alt="search icon">
+            <input class="search" type="search" placeholder="Sök på en rätt">
+            <button class="save-button">
+                <img src="assets/like_default.svg" alt="like button heart">
+                Sparade listor
+            </button>
+        </div>
+
+        <div class="course-box">
+            <div class="radio-box">
+                <input class="course-radio" type="radio" name="course-selector" id="pre">
+                <label for="pre">Förrätt</label>
+            </div>
+
+            <div class="radio-box">
+                <input class="course-radio" type="radio" name="course-selector" id="main">
+                <label for="main">Varmrätt</label>
+            </div>
+
+            <div class="radio-box">
+                <input class="course-radio" type="radio" name="course-selector" id="dessert">
+                <label for="dessert">Efterrätt</label>
+            </div>
+
+            <div class="radio-box">
+                <input class="course-radio" type="radio" name="course-selector" id="extras">
+                <label for="extras">Tillbehör/tilltugg</label>
+            </div>
+        </div>
+
+        <div class="price-box">
+            <div class="price-title">
+                <img src="assets/receive_payment.svg" alt="money icon">
+                <h2>Maxpris per portion</h2>
+                0 kr<input type="range" name="max-price" min="0" max="1000"> 1000 kr
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
