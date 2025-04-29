@@ -132,22 +132,22 @@ input[type=range] {
 .result-pin {
     display: flex;
     align-items: center;
+    background: none;
     border: 1px solid black;
     padding: 5px 8px;
     border-radius: 15px;
-    height: 15px;
+    height: 30px
+}
+
+.result-pin:hover {
+    
 }
 
 .result-pin img {
     /* width: 8px;
     height: 8px; */
     margin-left: -5px;
-    margin-right: 0px;
-}
-
-.result-pin button {
-    all: unset;
-    display: flex;
+    margin-right: -2px;
 }
 
 .result-pin button:hover {
