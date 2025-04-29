@@ -1,71 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="">
+  <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <script src="https://unpkg.com/vue@3.5.13"
-        integrity="sha384-G++pO/TtP6SeNEBuO/CYuppmlcEhA0Rj9IcY5feVJXhyYraEA8CKVZV38iDXLTyJ"
-        crossorigin="anonymous"></script>
-    <script type="module" src="app.js"></script>
-
-    <div id="app">
-        <div class="top">
-            <img src="assets/search.svg" alt="search icon">
-            <input class="top-search" type="search" placeholder="Sök på en rätt">
-            <button class="save-button">
-                <img src="assets/like_default.svg" alt="like button heart">
-                Sparade listor
-            </button>
-        </div>
-
-        <div class="course-box">
-            <div class="radio-box">
-                <input class="course-radio" type="radio" name="course-selector" id="pre">
-                <label for="pre">Förrätt</label>
-            </div>
-
-            <div class="radio-box">
-                <input class="course-radio" type="radio" name="course-selector" id="main">
-                <label for="main">Varmrätt</label>
-            </div>
-
-            <div class="radio-box">
-                <input class="course-radio" type="radio" name="course-selector" id="dessert">
-                <label for="dessert">Efterrätt</label>
-            </div>
-
-            <div class="radio-box">
-                <input class="course-radio" type="radio" name="course-selector" id="extras">
-                <label for="extras">Tillbehör/tilltugg</label>
-            </div>
-        </div>
-
-        <div class="price-title">
-            <img src="assets/receive_payment.svg" alt="money icon">
-            <span class="price-title">Maxpris per portion</span>
-        </div>
-        <div class="price-input">
-            <div>0 kr</div>
-            <input type="range" name="max-price" min="0" max="1000">
-            <div>1000 kr</div>
-        </div>
-
-
-        <search-component box-title="Tema" type="theme" :searches="themes"></search-component>
-        <search-component box-title="Ingredienser" type="ingredients" :searches="ingredients"></search-component>
-        <search-component box-title="Får ej förekomma" type="disallowed" image="../assets/info.svg"
-            :searches="ingredients"></search-component>
-        <search-component box-title="Anpassningar" type="adjust" image="../assets/round_arrows.svg"
-            :searches="ingredients"></search-component>
-    </div>
-
-
-</body>
-
+    <title>Receptsökaren</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
