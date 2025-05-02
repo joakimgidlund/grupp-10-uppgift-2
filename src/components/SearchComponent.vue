@@ -17,14 +17,11 @@ export default {
     }
   },
 
-  emits: ["changed"],
-
   methods: {
     addSearch(event) {
       if (!this.searchResults.includes(event.target.value)) {
         this.searchResults.push(event.target.value)
       }
-      this.$emit("changed", event.target.value)
       event.target.value = ""
     },
 
@@ -32,10 +29,6 @@ export default {
       const index = this.searchResults.indexOf(text)
       this.searchResults.splice(index, 1)
     },
-
-    getSearches() {
-      return this.searches
-    }
   },
 }
 </script>

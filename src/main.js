@@ -1,15 +1,17 @@
-import './assets/main.css'
+import "./assets/main.css"
 
-import { createApp } from 'vue'
-import { createWebHistory, createRouter } from 'vue-router'
+import { createApp } from "vue"
+import { createWebHistory, createRouter } from "vue-router"
 
-import App from './App.vue'
-import ResultsView from './ResultsView.vue'
-import SearchView from './SearchView.vue'
+import App from "./App.vue"
+import ResultsView from "./ResultsView.vue"
+import SearchView from "./SearchView.vue"
+import DishView from "./DishView.vue"
 
 const routes = [
-  { path: '/', component: SearchView },
-  { path: '/results', component: ResultsView },
+  { path: "/", component: SearchView },
+  { path: "/results", component: ResultsView },
+  { path: "/dishinfo", component: DishView }
 ]
 
 const router = createRouter({
@@ -17,4 +19,4 @@ const router = createRouter({
   routes,
 })
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).mount("#app")

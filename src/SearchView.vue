@@ -15,21 +15,14 @@ export default {
     }
   },
 
+  emits: ["update"],
+
   created() {
     this.themes = IngredientService.getThemes()
     this.ingredients = IngredientService.getIngredients()
   },
-
-  methods: {
-    addSearches(event) {
-      this.combinedSearches.push(event)
-      this.$route.myProps.message = "hahaha"
-    },
-    getFilters() {
-      return this.combinedSearches
-    }
-  }
 }
+
 </script>
 
 <template>
@@ -73,26 +66,26 @@ export default {
     <VueSlider width="80%" :height="5" v-model="sliderValue" :min="0" :max="1000" tooltipPlacement="bottom"
       :contained="true" :railStyle="{ backgroundColor: '#7C75AB' }" :processStyle="{ backgroundColor: '#101010' }"
       :dotStyle="{ backgroundColor: '#101010' }">
-      <template #tooltip="{ pos, index, value, focus, disabled }">
+      <template #tooltip="{ value }">
         <div>{{ value }}</div>
       </template>
     </VueSlider>
     <div class="slider-range">1000 kr</div>
   </div>
 
-  <SearchComponent @changed="addSearches" box-title="Tema" type="theme" :searches="themes"></SearchComponent>
-  <SearchComponent @changed="addSearches" box-title="Ingredienser" type="ingredients" :searches="ingredients">
+  <SearchComponent box-title="Tema" type="theme" :searches="themes"></SearchComponent>
+  <SearchComponent box-title="Ingredienser" type="ingredients" :searches="ingredients">
   </SearchComponent>
-  <SearchComponent @changed="addSearches" box-title="Får ej förekomma" type="disallowed" image="../assets/info.svg"
+  <SearchComponent box-title="Får ej förekomma" type="disallowed" image="../assets/info.svg"
     :searches="ingredients">
   </SearchComponent>
-  <SearchComponent @changed="addSearches" box-title="Anpassningar" type="adjust" image="../assets/round_arrows.svg"
+  <SearchComponent box-title="Anpassningar" type="adjust" image="../assets/round_arrows.svg"
     :searches="ingredients">
   </SearchComponent>
 
   <div class="footer">
     <span>Träffar: 172</span>
-    <button class="default-button">
+    <button @click="$emit('update')" class="default-button">
       <RouterLink class="link" to="/results">Visa</RouterLink>
     </button>
   </div>
