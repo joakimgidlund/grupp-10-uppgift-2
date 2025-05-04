@@ -1,6 +1,6 @@
 <script setup>
-import SearchResult from "./components/SearchResult.vue"
-import ResultSummary from "./components/ResultSummary.vue"
+import SearchPinComponent from "./components/SearchPinComponent.vue"
+import ResultBoxComponent from "./components/ResultBoxComponent.vue"
 </script>
 
 <script>
@@ -11,11 +11,11 @@ export default {}
   <div class="filter-box">
     <div class="title">Valda filter:</div>
     <div class="results">
-      <SearchResult text="Varmrätt"/>
-      <SearchResult text="BBQ"/>
-      <SearchResult text="Nötkött" class="ingredients"/>
-      <SearchResult text="Skaldjur" class="disallowed"/>
-      <SearchResult text="Ägg" class="adjust"/>
+      <SearchPinComponent text="Varmrätt"/>
+      <SearchPinComponent text="BBQ"/>
+      <SearchPinComponent text="Nötkött" class="ingredients"/>
+      <SearchPinComponent text="Skaldjur" class="disallowed"/>
+      <SearchPinComponent text="Ägg" class="adjust"/>
     </div>
     <div class="button-box">
       <button class="default-button"><RouterLink class="link" to="/">Redigera sökning</RouterLink></button>
@@ -24,10 +24,10 @@ export default {}
   </div>
   <div class="hits">172 träffar</div>
   <div class="result-summaries">
-    <ResultSummary title="BBQ-grillade nötköttsspett" theme="BBQ-tema, nötkött" adjust="Ägg" price="190" cost="100"/>
-    <ResultSummary title="Rökig nötköttsburgare" adjust="Ägg, gluten" price="245" cost="145"/>
-    <ResultSummary title="Grillade nötköttsbiffar med fetaost" theme="Nötkött" adjust="Ägg, gluten" price="245" cost="145"/>
-    <ResultSummary title="BBQ-fyllda tortillawraps med bönor och nötfärs" theme="BBQ-tema, nötkött" adjust="Gluten" price="190" cost="100"/>
+    <ResultBoxComponent title="BBQ-grillade nötköttsspett" theme="BBQ-tema, nötkött" adjust="Ägg" price="190" cost="100"/>
+    <ResultBoxComponent title="Rökig nötköttsburgare" adjust="Ägg, gluten" price="245" cost="145"/>
+    <ResultBoxComponent title="Grillade nötköttsbiffar med fetaost" theme="Nötkött" adjust="Ägg, gluten" price="245" cost="145"/>
+    <ResultBoxComponent title="BBQ-fyllda tortillawraps med bönor och nötfärs" theme="BBQ-tema, nötkött" adjust="Gluten" price="190" cost="100"/>
   </div>
 </template>
 

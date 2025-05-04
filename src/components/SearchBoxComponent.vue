@@ -1,5 +1,5 @@
 <script setup>
-import SearchResult from './SearchResult.vue'
+import SearchResult from './SearchPinComponent.vue'
 </script>
 
 <script>

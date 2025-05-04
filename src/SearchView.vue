@@ -1,5 +1,5 @@
 <script setup>
-import SearchComponent from './components/SearchComponent.vue'
+import SearchBoxComponent from './components/SearchBoxComponent.vue'
 import IngredientService from './components/IngredientService.vue'
 import VueSlider from "vue-3-slider-component"
 </script>
@@ -73,15 +73,15 @@ export default {
     <div class="slider-range">1000 kr</div>
   </div>
 
-  <SearchComponent box-title="Tema" type="theme" :searches="themes"></SearchComponent>
-  <SearchComponent box-title="Ingredienser" type="ingredients" :searches="ingredients">
-  </SearchComponent>
-  <SearchComponent box-title="Får ej förekomma" type="disallowed" image="../assets/info.svg"
+  <SearchBoxComponent box-title="Tema" type="theme" :searches="themes"></SearchBoxComponent>
+  <SearchBoxComponent box-title="Ingredienser" type="ingredients" :searches="ingredients">
+  </SearchBoxComponent>
+  <SearchBoxComponent box-title="Får ej förekomma" type="disallowed" image="../assets/info.svg"
     :searches="ingredients">
-  </SearchComponent>
-  <SearchComponent box-title="Anpassningar" type="adjust" image="../assets/round_arrows.svg"
+  </SearchBoxComponent>
+  <SearchBoxComponent box-title="Anpassningar" type="adjust" image="../assets/round_arrows.svg"
     :searches="ingredients">
-  </SearchComponent>
+  </SearchBoxComponent>
 
   <div class="footer">
     <span>Träffar: 172</span>
