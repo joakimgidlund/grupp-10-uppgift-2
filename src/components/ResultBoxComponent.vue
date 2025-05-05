@@ -17,7 +17,7 @@ export default {
   methods: {
     windowToggle() {
       let state = document.getElementById("list-window").style.display
-      if(state === "none" || state === "") {
+      if (state === "none" || state === "") {
         document.getElementById("list-window").style.display = "block"
       }
       else {
@@ -32,13 +32,15 @@ export default {
   <div class="summary">
     <div class="title">
       {{ title }}
-      <button class="like-button" @click="windowToggle"><img src="../assets/like_default.svg" alt="like button"></button>
+      <button class="like-button" @click="windowToggle"><img src="../assets/like_default.svg"
+          alt="like button"></button>
     </div>
     <div v-if="theme" class="info"> <img src="../assets/check.svg" alt="check icon">{{ theme }}</div>
     <div v-if="disallowed" class="info"><img src="../assets/info.svg" alt="info icon"> {{ disallowed }}</div>
     <div v-if="adjust" class="info"><img src="../assets/round_arrows.svg" alt="adjust icon"> {{ adjust }}</div>
-    <div v-if="price" class="info"><img src="../assets/receive_payment.svg" alt="price icon"> {{ price }} kr/portion
-      <img src="../assets/pay.svg" alt="cost icon">{{ cost }} kr/portion
+    <div v-if="price" class="info price">
+      <div><img src="../assets/receive_payment.svg" alt="price icon"> {{ price }} kr/portion</div>
+      <div><img src="../assets/pay.svg" alt="cost icon">{{ cost }} kr/portion</div>
     </div>
     <button class="summary-button">
       <RouterLink class="link" to="/dishinfo">
@@ -47,9 +49,6 @@ export default {
     </button>
     <CustomerListComponent @closeWindow="windowToggle" id="list-window"></CustomerListComponent>
   </div>
-
-
-
 </template>
 
 
@@ -62,7 +61,7 @@ export default {
   grid-row-start: 1;
   grid-row-end: 100;
 
-  justify-items:end;
+  justify-items: end;
 }
 
 .summary-button:hover {
@@ -121,5 +120,9 @@ export default {
 
   display: flex;
   gap: 5px;
+}
+
+.price {
+  gap: 24px;
 }
 </style>

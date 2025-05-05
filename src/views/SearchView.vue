@@ -1,7 +1,7 @@
 <script setup>
-import SearchBoxComponent from '../components/SearchBoxComponent.vue'
-import IngredientService from '../components/IngredientService.vue'
-import CustomerListComponent from '../components/CustomerListComponent.vue';
+import SearchBoxComponent from "../components/SearchBoxComponent.vue"
+import IngredientService from "../components/IngredientService.vue"
+import CustomerListComponent from "../components/CustomerListComponent.vue"
 import VueSlider from "vue-3-slider-component"
 </script>
 
@@ -90,10 +90,10 @@ export default {
   <div class="price-input">
     <div class="slider-range">0 kr</div>
     <VueSlider width="80%" :height="5" v-model="sliderValue" :min="0" :max="1000" tooltipPlacement="bottom"
-      :contained="true" :railStyle="{ backgroundColor: '#7C75AB' }" :processStyle="{ backgroundColor: '#101010' }"
+      tooltip="always" :contained="true" :railStyle="{ backgroundColor: '#7C75AB' }" :processStyle="{ backgroundColor: '#101010' }"
       :dotStyle="{ backgroundColor: '#101010' }">
       <template #tooltip="{ value }">
-        <div>{{ value }}</div>
+        <div>{{ value }}kr</div>
       </template>
     </VueSlider>
     <div class="slider-range">1000 kr</div>
@@ -104,9 +104,11 @@ export default {
   <SearchBoxComponent @list-dupe="showToast" box-title="Tema" type="theme" :searches="themes"></SearchBoxComponent>
   <SearchBoxComponent @list-dupe="showToast" box-title="Ingredienser" type="ingredients" :searches="ingredients">
   </SearchBoxComponent>
-  <SearchBoxComponent @list-dupe="showToast" box-title="Får ej förekomma" type="disallowed" image="../assets/info.svg" :searches="ingredients">
+  <SearchBoxComponent @list-dupe="showToast" box-title="Får ej förekomma" type="disallowed" image="../assets/info.svg"
+    :searches="ingredients">
   </SearchBoxComponent>
-  <SearchBoxComponent @list-dupe="showToast" box-title="Anpassningar" type="adjust" image="../assets/round_arrows.svg" :searches="ingredients">
+  <SearchBoxComponent @list-dupe="showToast" box-title="Anpassningar" type="adjust" image="../assets/round_arrows.svg"
+    :searches="ingredients">
   </SearchBoxComponent>
 
   <div class="toast">Filtret finns redan i listan!</div>

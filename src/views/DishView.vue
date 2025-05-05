@@ -7,7 +7,7 @@ export default {
   methods: {
     windowToggle() {
       let state = document.getElementById("list-window").style.display
-      if(state === "none" || state === "") {
+      if (state === "none" || state === "") {
         document.getElementById("list-window").style.display = "block"
       }
       else {
@@ -23,9 +23,9 @@ export default {
     <div class="header">
       <RouterLink class="link" to=/results><img src="../assets/back.svg" alt="back icon">Gå tillbaka</RouterLink>
       <button @click="windowToggle" class="save-button purple">
-      <img src="../assets/like_default.svg" alt="like button heart" />
-      Sparade listor
-    </button>
+        <img src="../assets/like_default.svg" alt="like button heart" />
+        Sparade listor
+      </button>
     </div>
     <CustomerListComponent @closeWindow="windowToggle" id="list-window"></CustomerListComponent>
     <div class="guide-box">
@@ -97,6 +97,7 @@ export default {
   font-size: 16px;
   font-weight: 400;
 }
+
 .header {
   display: flex;
   justify-content: space-between;

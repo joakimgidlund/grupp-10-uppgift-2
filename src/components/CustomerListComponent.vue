@@ -14,7 +14,7 @@ export default {
         <img src="../assets/small_cross.svg" alt="close window button">
       </button>
     </div>
-    <input type="text" placeholder="Sök på en minneslista"/>
+    <input type="text" placeholder="Sök på en minneslista" />
     <div class="hori-line"></div>
     <ul>
       <li>Karin & Niklas bröllop</li>
@@ -40,11 +40,11 @@ export default {
   display: none;
   position: absolute;
   z-index: 10;
-  top: 0px;
-  left: 50%;
+  top: 100px;
+  left: 10rem;
 
   background-color: #fff;
-  box-shadow: 0 0 0 2000px rgba(0,0,0,0.5);
+  box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -63,7 +63,7 @@ input {
   border-radius: 8px;
   border: 1px solid #7C75AB;
 
-  background-image:url("../assets/search.svg");
+  background-image: url("../assets/search.svg");
   background-repeat: no-repeat;
   background-size: 18px;
   background-position: 3px;
@@ -106,6 +106,7 @@ li {
   justify-self: center;
   background-color: #7C75AB;
 }
+
 .footer {
   display: flex;
   align-items: center;

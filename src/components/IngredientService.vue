@@ -1,11 +1,11 @@
 <script>
 const IngredientService = {
   getThemes() {
-      return ["BBQ", "Italienskt", "Franskt", "Husman"]
+    return ["BBQ", "Italienskt", "Franskt", "Husman"]
   },
 
   getIngredients() {
-      return ["Nötkött", "Mjölk", "Ägg"]
+    return ["Nötkött", "Mjölk", "Ägg"]
   }
 }
 
