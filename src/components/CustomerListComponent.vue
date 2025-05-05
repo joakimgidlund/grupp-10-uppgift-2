@@ -10,7 +10,7 @@ export default {
 <template>
   <div class="window">
     <div class="header">
-      <button @click="$emit('closeWindow')">
+      <button class="close-button" @click="$emit('closeWindow')">
         <img src="../assets/small_cross.svg" alt="close window button">
       </button>
     </div>
@@ -23,13 +23,18 @@ export default {
       <div class="hori-line"></div>
       <li>Ola & Conny grillfest</li>
     </ul>
+    <div class="hori-line-purple"></div>
+    <div class="footer">
+      <img src="../assets/plus_button.svg" alt="add button">
+      <span>Skapa minneslista</span>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .window {
   width: 250px;
-  height: 318px;
+  height: fit-content;
 
   border-radius: 10px;
   display: none;
@@ -40,8 +45,6 @@ export default {
 
   background-color: #fff;
   box-shadow: 0 0 0 2000px rgba(0,0,0,0.5);
-
-  /* border: 1px solid black; */
 }
 
 .header {
@@ -66,11 +69,19 @@ input {
   background-position: 3px;
 }
 
-button {
+.close-button {
   background: none;
   border: none;
   position: relative;
   top: 2px;
+}
+
+.close-button:hover {
+  cursor: pointer;
+}
+
+.close-button:active {
+  scale: 0.9;
 }
 
 ul {
@@ -87,5 +98,18 @@ li {
   width: 220px;
   justify-self: center;
   background-color: #D9D9D9;
+}
+
+.hori-line-purple {
+  height: 1px;
+  width: 100%;
+  justify-self: center;
+  background-color: #7C75AB;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 4px 7px 5px 7px;
 }
 </style>

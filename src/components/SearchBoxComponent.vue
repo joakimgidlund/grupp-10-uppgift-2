@@ -17,10 +17,15 @@ export default {
     }
   },
 
+  emits: ["listDupe"],
+
   methods: {
     addSearch(event) {
       if (!this.searchResults.includes(event.target.value)) {
         this.searchResults.push(event.target.value)
+      }
+      else {
+        this.$emit("listDupe")
       }
       event.target.value = ""
     },
@@ -44,19 +49,13 @@ export default {
       <option v-for="search in searches" :key="search" :value="search"></option>
     </datalist>
     <div class="result-box">
-      <SearchResult
-        @remove="removeElement"
-        :text="result"
-        :class="type"
-        v-for="result in searchResults"
-        :key="result"
-      ></SearchResult>
+      <SearchResult @remove="removeElement" :text="result" :class="type" v-for="result in searchResults" :key="result">
+      </SearchResult>
     </div>
   </div>
 </template>
 
 <style scoped>
-
 .search-box {
   border: 1px solid #7c75ab;
   border-radius: 5px;

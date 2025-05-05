@@ -1,6 +1,6 @@
 <script setup>
-import SearchPinComponent from "./components/SearchPinComponent.vue"
-import ResultBoxComponent from "./components/ResultBoxComponent.vue"
+import SearchPinComponent from "../components/SearchPinComponent.vue"
+import ResultBoxComponent from "../components/ResultBoxComponent.vue"
 </script>
 
 <script>

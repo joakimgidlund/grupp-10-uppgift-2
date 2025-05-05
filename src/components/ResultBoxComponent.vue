@@ -16,12 +16,12 @@ export default {
 
   methods: {
     windowToggle() {
-      let state = document.getElementById("listWindow").style.display
-      if(state === "none") {
-        document.getElementById("listWindow").style.display = "block"
+      let state = document.getElementById("list-window").style.display
+      if(state === "none" || state === "") {
+        document.getElementById("list-window").style.display = "block"
       }
       else {
-        document.getElementById("listWindow").style.display = "none"
+        document.getElementById("list-window").style.display = "none"
       }
     }
   }
@@ -45,7 +45,7 @@ export default {
         <img class="arrow" src="../assets/result_arrow.svg" alt="arrow">
       </RouterLink>
     </button>
-    <CustomerListComponent @closeWindow="windowToggle" id="listWindow"></CustomerListComponent>
+    <CustomerListComponent @closeWindow="windowToggle" id="list-window"></CustomerListComponent>
   </div>
 
 
@@ -70,7 +70,6 @@ export default {
 }
 
 .summary-button:active .arrow {
-  /* filter: drop-shadow(0px 2px 3px #000); */
   filter: blur(2px);
 }
 
@@ -80,6 +79,16 @@ export default {
 
 .like-button {
   all: unset;
+  display: flex;
+  align-items: center;
+}
+
+.like-button:hover {
+  scale: 1.1;
+}
+
+.like-button:active {
+  scale: 0.8;
 }
 
 .summary {

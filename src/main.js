@@ -4,9 +4,9 @@ import { createApp } from "vue"
 import { createWebHistory, createRouter } from "vue-router"
 
 import App from "./App.vue"
-import ResultsView from "./ResultsView.vue"
-import SearchView from "./SearchView.vue"
-import DishView from "./DishView.vue"
+import ResultsView from "./views/ResultsView.vue"
+import SearchView from "./views/SearchView.vue"
+import DishView from "./views/DishView.vue"
 
 const routes = [
   { path: "/", component: SearchView },

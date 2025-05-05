@@ -1,12 +1,33 @@
+<script setup>
+import CustomerListComponent from '../components/CustomerListComponent.vue';
+</script>
+
+<script>
+export default {
+  methods: {
+    windowToggle() {
+      let state = document.getElementById("list-window").style.display
+      if(state === "none" || state === "") {
+        document.getElementById("list-window").style.display = "block"
+      }
+      else {
+        document.getElementById("list-window").style.display = "none"
+      }
+    }
+  }
+}
+</script>
+
 <template>
   <div class="main">
     <div class="header">
-      <RouterLink class="link" to=/results><img src="./assets/back.svg" alt="back icon">Gå tillbaka</RouterLink>
-      <button class="save-button purple">
-      <img src="./assets/like_default.svg" alt="like button heart" />
+      <RouterLink class="link" to=/results><img src="../assets/back.svg" alt="back icon">Gå tillbaka</RouterLink>
+      <button @click="windowToggle" class="save-button purple">
+      <img src="../assets/like_default.svg" alt="like button heart" />
       Sparade listor
     </button>
     </div>
+    <CustomerListComponent @closeWindow="windowToggle" id="list-window"></CustomerListComponent>
     <div class="guide-box">
       <h1 class="title">BBQ-grillade nötköttsspett</h1>
       <div class="basic-info">
@@ -113,7 +134,7 @@
 
 .guide-box {
   display: grid;
-  grid-template-columns: 380px 1fr;
+  grid-template-columns: 360px 1fr;
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "header header"
