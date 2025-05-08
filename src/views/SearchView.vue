@@ -90,8 +90,8 @@ export default {
   <div class="price-input">
     <div class="slider-range">0 kr</div>
     <VueSlider width="80%" :height="5" v-model="sliderValue" :min="0" :max="1000" tooltipPlacement="bottom"
-      tooltip="always" :contained="true" :railStyle="{ backgroundColor: '#7C75AB' }" :processStyle="{ backgroundColor: '#101010' }"
-      :dotStyle="{ backgroundColor: '#101010' }">
+      tooltip="always" :contained="true" :railStyle="{ backgroundColor: '#7C75AB' }"
+      :processStyle="{ backgroundColor: '#101010' }" :dotStyle="{ backgroundColor: '#101010' }">
       <template #tooltip="{ value }">
         <div>{{ value }}kr</div>
       </template>
